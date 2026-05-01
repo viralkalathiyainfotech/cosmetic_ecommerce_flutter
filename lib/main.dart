@@ -1,7 +1,9 @@
 import 'package:cosmatic_e_commerce/helpers/navigation_animations.dart';
+import 'package:cosmatic_e_commerce/screens/login_screen.dart';
 import 'package:cosmatic_e_commerce/screens/onboarding_1_screen.dart';
 import 'package:cosmatic_e_commerce/screens/onboarding_2_screen.dart';
 import 'package:cosmatic_e_commerce/screens/onboarding_3_screen.dart';
+import 'package:cosmatic_e_commerce/screens/otp_screen.dart';
 import 'package:cosmatic_e_commerce/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,9 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Cosmatic',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+      theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       getPages: [
         GetPage(name: SplashScreen.routeName, page: () => SplashScreen()),
         GetPage(
@@ -29,16 +29,28 @@ class MyApp extends StatelessWidget {
           customTransition: OnboardingTransition(),
           transitionDuration: const Duration(milliseconds: 380),
         ),
-         GetPage(
+        GetPage(
           name: Onboarding2Screen.routeName,
           page: () => const Onboarding2Screen(),
           customTransition: OnboardingTransition(),
           transitionDuration: const Duration(milliseconds: 380),
         ),
-         GetPage(
+        GetPage(
           name: Onboarding3Screen.routeName,
           page: () => const Onboarding3Screen(),
           customTransition: OnboardingTransition(),
+          transitionDuration: const Duration(milliseconds: 380),
+        ),
+        GetPage(
+          name: LoginScreen.routeName,
+          page: () => LoginScreen(),
+          customTransition: ZoomFadeTransition(),
+          transitionDuration: const Duration(milliseconds: 380),
+        ),
+        GetPage(
+          name: OtpScreen.routeName,
+          page: () => const OtpScreen(),
+          customTransition: ZoomFadeTransition(),
           transitionDuration: const Duration(milliseconds: 380),
         ),
       ],

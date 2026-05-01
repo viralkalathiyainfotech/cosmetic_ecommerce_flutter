@@ -1,4 +1,5 @@
 import 'package:cosmatic_e_commerce/helpers/fonts.dart';
+import 'package:cosmatic_e_commerce/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,7 +13,6 @@ class Onboarding3Screen extends StatelessWidget {
     final width  = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Column(
         children: [
           Image.asset(
@@ -69,10 +69,9 @@ class Onboarding3Screen extends StatelessWidget {
                         width: double.infinity,
                         height: 52,
                         child: ElevatedButton(
-                          onPressed: (){},
-                          // onPressed: () => Get.toNamed(
-                          //   Onboarding2Screen.routeName,
-                          // ),
+                          onPressed: () => Get.toNamed(
+                            LoginScreen.routeName,
+                          ),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.black,
                             foregroundColor: Colors.white,

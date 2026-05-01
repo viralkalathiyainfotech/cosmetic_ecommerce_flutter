@@ -13,7 +13,6 @@ class Onboarding2Screen extends StatelessWidget {
     final width  = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Column(
         children: [
           Image.asset(

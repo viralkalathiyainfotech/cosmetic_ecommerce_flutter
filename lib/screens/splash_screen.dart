@@ -14,7 +14,6 @@ class SplashScreen extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Stack(
         children: [
           /// Top Left Orange Slice
